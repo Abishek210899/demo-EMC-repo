@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>0 to Shipped — Resume Parser</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo">0<span>→</span>Shipped</a>
+      <ul class="nav-links">
+        <li><a href="#parser">Parser</a></li>
+        <li><a href="#how">How it works</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container">
+      <p class="badge">Resume Parser</p>
+      <h1>Know where your resume stands <em>before</em> recruiters do.</h1>
+      <p class="sub">
+        Upload a PDF, get an instant score, and see which skills you show off —
+        and which ones you're missing.
+      </p>
+      <a href="#parser" class="btn primary">Try it free ↓</a>
+    </div>
+  </header>
+
+  <!-- Parser section -->
+  <section id="parser" class="parser-section">
+    <div class="container">
+      <h2>Upload your resume</h2>
+      <p class="section-sub">PDF only. Nothing leaves your browser.</p>
+
+      <div class="upload-card" id="upload-card">
+        <div class="upload-icon">📄</div>
+        <p class="upload-title">Drop your resume here</p>
+        <p class="upload-hint">or click to browse</p>
+        <input type="file" id="file-input" accept=".pdf" hidden />
+      </div>
+      <p id="file-name" class="file-name"></p>
+
+      <!-- Results (hidden until "upload") -->
+      <div id="results" class="results hidden">
+        <div class="score-card">
+          <div class="score-ring">
+            <span id="score-value">0</span>
+            <span class="score-suffix">/100</span>
+          </div>
+          <div class="score-label">
+            <h3>Resume Score</h3>
+            <p id="score-verdict">Analyzing…</p>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card present">
+            <h3>✅ Skills present</h3>
+            <div id="skills-present" class="skill-tags"></div>
+          </div>
+          <div class="skill-card missing">
+            <h3>🚩 Skills missing</h3>
+            <div id="skills-missing" class="skill-tags"></div>
+          </div>
+        </div>
+
+        <button id="reset-btn" class="btn ghost">Analyze another resume</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how" class="how-section">
+    <div class="container">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Upload</h3>
+          <p>Drop in a PDF resume. No signup, no server.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Parse</h3>
+          <p>The parser scans your skills and experience.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Score</h3>
+          <p>Get a 0–100 score with present & missing skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>0→Shipped Resume Parser — mock demo, scores are simulated.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
