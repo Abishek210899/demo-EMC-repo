@@ -101,7 +101,9 @@ body {
   content: ""; position: absolute; inset: 10px;
   background: var(--surface); border-radius: 50%;
 }
-.score-ring span { position: relative; font-size: 2rem; font-weight: 800; z-index: 1; }
+.score-ring span {
+  position: relative; font-size: 2rem; font-weight: 800; z-index: 1;
+}
 .score-suffix { font-size: 0.9rem; color: var(--muted); }
 .score-label h3 { font-size: 1.3rem; }
 .score-label p { color: var(--muted); }
